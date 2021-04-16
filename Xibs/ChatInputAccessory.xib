@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessoryView" customModule="line_bot" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="3hg-TI-Vce" id="Ngf-fI-kPu"/>
+                <outlet property="sendButton" destination="YLP-eO-mbg" id="UBu-zK-rD7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="717" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="メッセージがここにはいります。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3hg-TI-Vce">
+                    <rect key="frame" x="10" y="74" width="647" height="98"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLP-eO-mbg">
+                    <rect key="frame" x="667" y="78" width="40" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="IB0-up-uRJ"/>
+                        <constraint firstAttribute="height" constant="30" id="STk-0K-clH"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="paper-plane"/>
+                    <connections>
+                        <action selector="tappedSendButton:" destination="-1" eventType="touchUpInside" id="h8k-hO-auM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YLP-eO-mbg" secondAttribute="bottom" constant="14" id="ImC-XW-ORE"/>
+                <constraint firstItem="YLP-eO-mbg" firstAttribute="centerY" secondItem="3hg-TI-Vce" secondAttribute="centerY" id="Ko1-eS-nAp"/>
+                <constraint firstItem="3hg-TI-Vce" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="SK6-kp-GIN"/>
+                <constraint firstItem="YLP-eO-mbg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="34" id="V4P-Q4-1wx"/>
+                <constraint firstItem="3hg-TI-Vce" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="10" id="bgE-OX-lra"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3hg-TI-Vce" secondAttribute="bottom" constant="10" id="dY8-nt-4MO"/>
+                <constraint firstItem="YLP-eO-mbg" firstAttribute="leading" secondItem="3hg-TI-Vce" secondAttribute="trailing" constant="10" id="dyK-2v-Bbg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YLP-eO-mbg" secondAttribute="trailing" constant="10" id="fOE-Wk-HHA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YLP-eO-mbg" secondAttribute="trailing" constant="10" id="ozc-Fp-Kbs"/>
+                <constraint firstItem="YLP-eO-mbg" firstAttribute="leading" secondItem="3hg-TI-Vce" secondAttribute="trailing" constant="10" id="uVc-VX-0oK"/>
+                <constraint firstItem="3hg-TI-Vce" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="vTJ-sj-6bi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="109.42028985507247" y="289.28571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="paper-plane" width="452" height="452"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
